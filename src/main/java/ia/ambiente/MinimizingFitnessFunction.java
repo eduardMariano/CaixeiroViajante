@@ -3,8 +3,12 @@ package ia.ambiente;
 import org.jgap.FitnessFunction;
 import org.jgap.IChromosome;
 
+import java.util.ArrayList;
+import java.util.Map;
+
 public class MinimizingFitnessFunction extends FitnessFunction{
 
+    public static ArrayList<Map> distances;
     private Integer MINWAY = null;
 
     protected double evaluate(IChromosome chromosome) {
@@ -25,7 +29,15 @@ public class MinimizingFitnessFunction extends FitnessFunction{
     public static int getDistanceAtGene(IChromosome a_potentialSolution, int a_position, int a_position_next ) {
         Integer city1 = (Integer) a_potentialSolution.getGene(a_position).getAllele();
         Integer city2 = (Integer) a_potentialSolution.getGene(a_position_next).getAllele();
-        return Math.abs(city1.intValue() - city2.intValue());
+        return Math.abs(getValueAtGene(city1, city2));
+    }
+
+    public static int getValueAtGene(Integer c1, Integer c2){
+        Map<Integer, Integer> p1 = distances.get(c1.intValue());
+        Map<Integer, Integer> p2 = distances.get(c2.intValue());
+        double dx = Math.pow(p2.get(0) - p1.get(0),2);
+        double dy = Math.pow(p2.get(1) - p1.get(1),2);
+        return (int) Math.sqrt(dx+dy);
     }
 
     public static int getTotalOfDistance(IChromosome a_potentialsolution ) {

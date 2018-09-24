@@ -5,8 +5,7 @@ import org.jgap.impl.*;
 
 import ia.ambiente.MinimizingFitnessFunction;
 
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 import ia.grafico.Graph;
@@ -17,6 +16,8 @@ public class TravelingSalesman {
     private int totalCity;
     private int populations;
     private int numEvolutions = 10000;
+    private ArrayList<Map> distances;
+    private ArrayList<Map> visits;
 
     public TravelingSalesman(int totalCity, int populations) {
         this.totalCity = totalCity;
@@ -38,7 +39,10 @@ public class TravelingSalesman {
             IntegerGene gene = new IntegerGene(conf, i, i);
             gene.setAllele(i);
             sampleGenes[i] = gene;
+            distances.set(i, getDistance());
         }
+
+        MinimizingFitnessFunction.distances = distances;
 
         Population population_alan = new Population(conf, sampleChromossomes);
 
@@ -71,6 +75,8 @@ public class TravelingSalesman {
         System.out.println("O tempo total das evoluções foi : " + ( endTime - startTime) + " ms");
     }
 
+
+
     private static boolean uniqueChromosomes(Population a_pop) {
 
         for(int i=0;i<a_pop.size()-1;i++) {
@@ -94,5 +100,30 @@ public class TravelingSalesman {
             ar[index] = ar[i];
             ar[i] = a;
         }
+    }
+
+    private Map<Integer, Integer> getDistance() {
+        Map<Integer, Integer> plano = new HashMap<>();
+
+        if(this.visits == null){
+            plano.put(aleatoriar(), aleatoriar());
+            this.visits.add(plano);
+            this.visits.get(0);
+            System.out.println(this.visits);
+        }else{
+            if(this.visits.contains(plano)){
+                return getDistance();
+            }else{
+                plano.put(aleatoriar(), aleatoriar());
+                this.visits.add(plano);
+            }
+        }
+
+        return plano;
+    }
+
+    public int aleatoriar() {
+        Random random = new Random();
+        return random.nextInt((20 - 0) + 1) + 0;
     }
 }
