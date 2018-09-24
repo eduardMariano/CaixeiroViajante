@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
+import ia.grafico.Graph;
+import  org.jfree.ui.RefineryUtilities;
+
 public class TravelingSalesman {
 
     private int totalCity;

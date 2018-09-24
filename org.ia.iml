@@ -24,6 +24,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.jfree:jcommon:1.0.24" level="project" />
+    <orderEntry type="library" name="Maven: org.jfree:chart:1.0.6" level="project" />
     <orderEntry type="library" name="Maven: net.sf.jgap:jgap:3.4.4" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.3" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.9" level="project" />
@@ -40,5 +42,7 @@
     <orderEntry type="library" name="Maven: junit:junit:3.8.1" level="project" />
     <orderEntry type="library" name="Maven: xerces:xercesImpl:2.6.2" level="project" />
     <orderEntry type="library" name="Maven: xerces:xmlParserAPIs:2.6.2" level="project" />
+    <orderEntry type="library" name="Maven: org.jfree:jfreechart:1.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.jfree:jcommon:1.0.24" level="project" />
   </component>
 </module>

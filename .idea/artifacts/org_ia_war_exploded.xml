@@ -23,6 +23,8 @@
           <element id="library" level="project" name="Maven: junit:junit:3.8.1" />
           <element id="library" level="project" name="Maven: xerces:xercesImpl:2.6.2" />
           <element id="library" level="project" name="Maven: xerces:xmlParserAPIs:2.6.2" />
+          <element id="library" level="project" name="Maven: org.jfree:jfreechart:1.5.0" />
+          <element id="library" level="project" name="Maven: org.jfree:jcommon:1.0.24" />
         </element>
       </element>
       <element id="directory" name="META-INF">

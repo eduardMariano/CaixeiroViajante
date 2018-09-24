@@ -17,5 +17,10 @@ public class Main {
 		    e.printStackTrace();
         }
 
+//		final Graph demo = new Graph("Caixeiro Viajante");
+//		demo.pack();
+//		RefineryUtilities.centerFrameOnScreen(demo);
+//		demo.setVisible(true);
+
 	}
 }
