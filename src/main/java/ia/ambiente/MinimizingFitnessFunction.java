@@ -1,14 +1,15 @@
 package ia.ambiente;
 
+import ia.problema.Pontos;
 import org.jgap.FitnessFunction;
 import org.jgap.IChromosome;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class MinimizingFitnessFunction extends FitnessFunction{
 
-    public static ArrayList<Map> distances;
+    public static List<Pontos> distances;
     private Integer MINWAY = null;
 
     protected double evaluate(IChromosome chromosome) {
@@ -33,10 +34,10 @@ public class MinimizingFitnessFunction extends FitnessFunction{
     }
 
     public static int getValueAtGene(Integer c1, Integer c2){
-        Map<Integer, Integer> p1 = distances.get(c1.intValue());
-        Map<Integer, Integer> p2 = distances.get(c2.intValue());
-        double dx = Math.pow(p2.get(0) - p1.get(0),2);
-        double dy = Math.pow(p2.get(1) - p1.get(1),2);
+        Pontos p1 = distances.get(c1.intValue());
+        Pontos p2 = distances.get(c2.intValue());
+        double dx = Math.pow(p2.getX() - p1.getX(),2);
+        double dy = Math.pow(p2.getY() - p1.getY(),2);
         return (int) Math.sqrt(dx+dy);
     }
 

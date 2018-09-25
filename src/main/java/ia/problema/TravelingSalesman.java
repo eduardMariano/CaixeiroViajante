@@ -16,8 +16,8 @@ public class TravelingSalesman {
     private int totalCity;
     private int populations;
     private int numEvolutions = 10000;
-    private ArrayList<Map> distances;
-    private ArrayList<Map> visits;
+    private List<Pontos> distances;
+    private List<Pontos> visits;
 
     public TravelingSalesman(int totalCity, int populations) {
         this.totalCity = totalCity;
@@ -39,7 +39,7 @@ public class TravelingSalesman {
             IntegerGene gene = new IntegerGene(conf, i, i);
             gene.setAllele(i);
             sampleGenes[i] = gene;
-            distances.set(i, getDistance());
+            distances.set(i, getDistance(i));
         }
 
         MinimizingFitnessFunction.distances = distances;
@@ -102,24 +102,26 @@ public class TravelingSalesman {
         }
     }
 
-    private Map<Integer, Integer> getDistance() {
-        Map<Integer, Integer> plano = new HashMap<>();
+    private Pontos getDistance(int index) {
+        Pontos pontos = null;
 
         if(this.visits == null){
-            plano.put(aleatoriar(), aleatoriar());
-            this.visits.add(plano);
-            this.visits.get(0);
-            System.out.println(this.visits);
+            pontos = new Pontos(aleatoriar(), aleatoriar());
+            this.visits.set(index, pontos);
         }else{
-            if(this.visits.contains(plano)){
-                return getDistance();
+            if(isRepeat(pontos)){
+                return getDistance(index);
             }else{
-                plano.put(aleatoriar(), aleatoriar());
-                this.visits.add(plano);
+                pontos = new Pontos(aleatoriar(), aleatoriar());
+                this.visits.add(pontos);
             }
         }
 
-        return plano;
+        return pontos;
+    }
+
+    public boolean isRepeat(Pontos pontos){
+        return this.visits.contains(pontos);
     }
 
     public int aleatoriar() {
