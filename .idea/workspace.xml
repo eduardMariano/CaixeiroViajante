@@ -1,51 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b38d241-9e69-489e-9e4e-f62c7a8d6b80" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/org_ia_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/org_ia_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_addons_junit_addons_1_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jcgrid_jcgrid_0_05.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jgap_jgap_3_4_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_trove4j_trove4j_2_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jfree_jcommon_1_0_24.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jfree_jfreechart_1_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tablelayout_TableLayout_20050920.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_6_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xmlParserAPIs_2_6_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_1_1_3_4_O.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_min_1_1_3_4_O.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/org.ia.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/results1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ia/grafico/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ia/grafico/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ia/problema/TravelingSalesman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ia/problema/TravelingSalesman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ia/ambiente/MinimizingFitnessFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ia/ambiente/MinimizingFitnessFunction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ia/grafico/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ia/grafico/Graph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ia/main/AlgoritmoGenetico.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ia/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ia/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ia/problema/TravelingSalesman.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ia/problema/TravelingSalesman.class" afterDir="false" />
-    </list>
+    <list default="true" id="1b38d241-9e69-489e-9e4e-f62c7a8d6b80" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,8 +15,8 @@
       <file leaf-file-name="Graph.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ia/grafico/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+            <state relative-caret-position="4">
+              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -332,16 +288,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538482138176</updated>
-      <workItem from="1538482139709" duration="7961000" />
+      <workItem from="1538482139709" duration="8240000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7961000" />
+    <option name="totallyTimeSpent" value="8240000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1608" height="864" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -353,7 +308,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" weight="0.32991013" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32972974" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32972974" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
@@ -468,8 +423,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ia/grafico/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        <state relative-caret-position="4">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
