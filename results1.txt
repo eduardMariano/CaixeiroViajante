@@ -1,10 +1,33 @@
 Pontos Inicial : 
-Cidade 0 -> Posicão X : 15.0 Posição Y : 7.0
-Cidade 1 -> Posicão X : 2.0 Posição Y : 7.0
-Cidade 2 -> Posicão X : 10.0 Posição Y : 16.0
-Cidade 3 -> Posicão X : 15.0 Posição Y : 3.0
-Cidade 4 -> Posicão X : 9.0 Posição Y : 6.0
-Cidade 5 -> Posicão X : 13.0 Posição Y : 16.0
-Cidade 6 -> Posicão X : 10.0 Posição Y : 18.0
-Cidade 7 -> Posicão X : 12.0 Posição Y : 18.0
+Cidade 0 -> Posicão X : 12.0 Posição Y : 16.0
+Cidade 1 -> Posicão X : 9.0 Posição Y : 16.0
+Cidade 2 -> Posicão X : 12.0 Posição Y : 17.0
+Cidade 3 -> Posicão X : 2.0 Posição Y : 8.0
+Cidade 4 -> Posicão X : 20.0 Posição Y : 8.0
+Cidade 5 -> Posicão X : 9.0 Posição Y : 17.0
+Cidade 6 -> Posicão X : 14.0 Posição Y : 17.0
+Cidade 7 -> Posicão X : 17.0 Posição Y : 3.0
 ######################################################
+A melhor solução pra fitness foi 47.0
+Pontos Inicial : 
+Cidade 0 -> Posicão X : 12.0 Posição Y : 16.0
+ A distância da cidade 0 para a cidade : 2 é de : 1
+Cidade 2 -> Posicão X : 12.0 Posição Y : 17.0
+ A distância da cidade 2 para a cidade : 5 é de : 3
+Cidade 5 -> Posicão X : 9.0 Posição Y : 17.0
+ A distância da cidade 5 para a cidade : 1 é de : 1
+Cidade 1 -> Posicão X : 9.0 Posição Y : 16.0
+ A distância da cidade 1 para a cidade : 3 é de : 10
+Cidade 3 -> Posicão X : 2.0 Posição Y : 8.0
+ A distância da cidade 3 para a cidade : 7 é de : 15
+Cidade 7 -> Posicão X : 17.0 Posição Y : 3.0
+ A distância da cidade 7 para a cidade : 4 é de : 5
+Cidade 4 -> Posicão X : 20.0 Posição Y : 8.0
+ A distância da cidade 4 para a cidade : 6 é de : 10
+Cidade 6 -> Posicão X : 14.0 Posição Y : 17.0
+ A distância da cidade 6 para a cidade : 0 é de : 2
+A distancia total é 47
+######################################################
+O tempo total das evoluções foi : 4631 ms
+
+

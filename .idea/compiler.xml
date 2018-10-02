@@ -9,8 +9,5 @@
         <module name="org.ia" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="org.ia" target="7" />
-    </bytecodeTargetLevel>
   </component>
 </project>

@@ -27,7 +27,7 @@ public class TravelingSalesman {
 
     public void makeChange(PrintWriter gravarArq) throws Exception {
 
-        Graph g = new Graph("");
+        Graph g = new Graph();
         Configuration conf = new DefaultConfiguration();
         conf.setPreservFittestIndividual(true);
         conf.setAlwaysCaculateFitness(true);
@@ -45,6 +45,7 @@ public class TravelingSalesman {
         }
 
         printDistances(distances, gravarArq);
+        g.plot(distances);
 
         MinimizingFitnessFunction.distances = distances;
 
@@ -75,6 +76,7 @@ public class TravelingSalesman {
         List<Integer> positions = MinimizingFitnessFunction.getBestSolutionPosition(bestSolutionSoFar);
         List<Integer> bestDistance = MinimizingFitnessFunction.getBestSolutionDistance(bestSolutionSoFar);
         printBestDistances(bestPontos, positions, bestDistance, gravarArq);
+        g.plot(bestPontos);
         gravarArq.println("O tempo total das evoluções foi : " + ( endTime - startTime) + " ms");
         gravarArq.println("");
         gravarArq.println("");
