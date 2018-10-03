@@ -1,10 +1,10 @@
 package ia.main;
 
 import ia.problema.TravelingSalesman;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Scanner;
 
 @SuppressWarnings("unused")
 public class Main {
@@ -23,5 +23,6 @@ public class Main {
 		    e.printStackTrace();
         }
         arq.close();
+
 	}
 }

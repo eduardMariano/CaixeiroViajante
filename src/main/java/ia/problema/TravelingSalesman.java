@@ -1,6 +1,5 @@
 package ia.problema;
 
-import ia.grafico.Graph;
 import org.jgap.*;
 import org.jgap.impl.*;
 
@@ -8,7 +7,6 @@ import ia.ambiente.MinimizingFitnessFunction;
 
 import java.io.PrintWriter;
 import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
 
 import java.awt.Point;
 
@@ -27,9 +25,10 @@ public class TravelingSalesman {
 
     public void makeChange(PrintWriter gravarArq) throws Exception {
 
-        Graph g = new Graph();
         Configuration conf = new DefaultConfiguration();
         conf.setPreservFittestIndividual(true);
+        conf.addNaturalSelector(new WeightedRouletteSelector(conf), true);
+        conf.addNaturalSelector(new WeightedRouletteSelector(conf), false);
         conf.setAlwaysCaculateFitness(true);
         FitnessFunction myFunc = new MinimizingFitnessFunction();
         conf.setFitnessFunction(myFunc);
@@ -45,7 +44,8 @@ public class TravelingSalesman {
         }
 
         printDistances(distances, gravarArq);
-        g.plot(distances);
+        gravarArq.println("");
+        gravarArq.println("");
 
         MinimizingFitnessFunction.distances = distances;
 
@@ -55,8 +55,9 @@ public class TravelingSalesman {
 
         conf.setPopulationSize(this.populations);
 
-        conf.addGeneticOperator(new SwappingMutationOperator(conf, 15));
-        conf.addGeneticOperator(new CrossoverOperator(conf));
+        conf.getGeneticOperators().clear();
+        conf.addGeneticOperator(new CrossoverOperator(conf, 75));
+        conf.addGeneticOperator(new SwappingMutationOperator(conf,15));
 
         Genotype population = Genotype.randomInitialGenotype(conf);
 
@@ -71,15 +72,14 @@ public class TravelingSalesman {
         long endTime = System.currentTimeMillis();
 
         IChromosome bestSolutionSoFar = MinimizingFitnessFunction.chromo;
-        gravarArq.println("A melhor solução pra fitness foi " + bestSolutionSoFar.getFitnessValue());
+        System.out.println("A melhor solução pra fitness foi " + bestSolutionSoFar.getFitnessValue());
         List<Point> bestPontos = MinimizingFitnessFunction.getBestSolution(bestSolutionSoFar);
         List<Integer> positions = MinimizingFitnessFunction.getBestSolutionPosition(bestSolutionSoFar);
         List<Integer> bestDistance = MinimizingFitnessFunction.getBestSolutionDistance(bestSolutionSoFar);
         printBestDistances(bestPontos, positions, bestDistance, gravarArq);
-        g.plot(bestPontos);
-        gravarArq.println("O tempo total das evoluções foi : " + ( endTime - startTime) + " ms");
-        gravarArq.println("");
-        gravarArq.println("");
+        System.out.println("O tempo total das evoluções foi : " + ( endTime - startTime) + " ms");
+        System.out.println("");
+        System.out.println("");
 
     }
 
@@ -122,31 +122,33 @@ public class TravelingSalesman {
 
     public int aleatoriar() {
         Random random = new Random();
-        return random.nextInt((20 - 0) + 1) + 0;
+        return random.nextInt((30 - 0) + 1) + 0;
     }
 
     public void printDistances(List<Point> pontos, PrintWriter gravarArq){
-        gravarArq.println("Pontos Inicial : ");
+        System.out.println("Pontos Inicial : ");
         for (int i = 0; i < pontos.size(); i++) {
-            gravarArq.println("Cidade "+i+" -> Posicão X : "+pontos.get(i).getX()+" Posição Y : "+pontos.get(i).getY());
+            gravarArq.println("array(\"x\" => "+pontos.get(i).x+", \"y\" => "+pontos.get(i).y+", \"label\" => \"Cidade "+i+"\"),");
+            System.out.println("Cidade "+i+" -> Posicão X : "+pontos.get(i).x+" Posição Y : "+pontos.get(i).y);
         }
-        gravarArq.println("######################################################");
+        System.out.println("######################################################");
     }
 
     public void printBestDistances(List<Point> pontos, List<Integer> position, List<Integer> distance, PrintWriter gravarArq){
-        gravarArq.println("Pontos Inicial : ");
+        System.out.println("Pontos Inicial : ");
         int totalDistance = 0;
         for (int i = 0; i < pontos.size(); i++) {
+            gravarArq.println("array(\"x\" => "+pontos.get(i).x+", \"y\" => "+pontos.get(i).y+", \"indexLabel\" => \"Cidade "+position.get(i)+"\", \"color\" => \"blue\"),");
             if (i != (pontos.size() - 1)){
-                gravarArq.println("Cidade " + position.get(i) + " -> Posicão X : " + pontos.get(i).getX() + " Posição Y : " + pontos.get(i).getY());
-                gravarArq.println(" A distância da cidade " + position.get(i) + " para a cidade : " + position.get((i+1)) + " é de : " + distance.get(i));
+                System.out.println("Cidade " + position.get(i) + " -> Posicão X : " + pontos.get(i).x + " Posição Y : " + pontos.get(i).y);
+                System.out.println(" A distância da cidade " + position.get(i) + " para a cidade : " + position.get((i+1)) + " é de : " + distance.get(i));
             }else{
-                gravarArq.println("Cidade " + position.get(i) + " -> Posicão X : " + pontos.get(i).getX() + " Posição Y : " + pontos.get(i).getY());
-                gravarArq.println(" A distância da cidade " + position.get(i) + " para a cidade : " + position.get(0) + " é de : " + distance.get(i));
+                System.out.println("Cidade " + position.get(i) + " -> Posicão X : " + pontos.get(i).x + " Posição Y : " + pontos.get(i).y);
+                System.out.println(" A distância da cidade " + position.get(i) + " para a cidade : " + position.get(0) + " é de : " + distance.get(i));
             }
             totalDistance += distance.get(i);
         }
-        gravarArq.println("A distancia total é "+ totalDistance);
-        gravarArq.println("######################################################");
+        System.out.println("A distancia total é "+ totalDistance);
+        System.out.println("######################################################");
     }
 }
